@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090d">
+  <meta name="description" content="A single-photo location page with Apple Maps and Google Maps directions.">
+  <title>Location Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Location Reference home">
+        <span class="brand-mark">LR</span>
+        <span>LOCATION <b>REFERENCE</b></span>
+      </a>
+      <span class="status"><i></i> PHOTO RECORD</span>
+    </header>
+
+    <section class="intro" id="top">
+      <p class="eyebrow">SINGLE IMAGE • LOCATION DETAILS</p>
+      <h1>LOCATION<br><span>REFERENCE</span></h1>
+      <p class="intro-copy">One photo. Two map destinations. Open the map service you prefer below.</p>
+    </section>
+
+    <section class="photo-panel" aria-label="Location photograph">
+      <div class="photo-heading">
+        <span>01 / PHOTO</span>
+        <span class="photo-heading-line"></span>
+        <span>ORIGINAL IMAGE</span>
+      </div>
+      <button class="image-button" id="openImage" type="button" aria-label="View image full screen">
+        <img src="assets/location-photo.png" alt="Provided location reference photograph">
+        <span class="expand-hint"><span aria-hidden="true">⤢</span> EXPAND IMAGE</span>
+      </button>
+      <div class="photo-caption">
+        <span>LOCATION SNAPSHOT</span>
+        <span>IMAGE 01</span>
+      </div>
+    </section>
+
+    <section class="destination" aria-labelledby="destination-title">
+      <div class="section-kicker"><span>02 / NAVIGATION</span><span class="section-rule"></span></div>
+      <div class="destination-heading">
+        <div>
+          <p class="eyebrow">CHOOSE YOUR MAP</p>
+          <h2 id="destination-title">OPEN DIRECTIONS<span>.</span></h2>
+        </div>
+        <p class="destination-note">Select a provider to open the supplied destination.</p>
+      </div>
+      <div class="map-links">
+        <a class="map-card apple" href="https://maps.apple.com/place?address=397+Mountain+Rd%2C+Albrightsville%2C+PA++18210%2C+United+States&coordinate=41.002250%2C-75.504556&name=397+Mountain+Rd&map=satellite" target="_blank" rel="noopener noreferrer">
+          <span class="map-icon apple-icon" aria-hidden="true">A</span>
+          <span class="map-copy"><strong>Apple Maps</strong><small>Open satellite map and directions</small></span>
+          <span class="map-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="map-card google" href="https://maps.app.goo.gl/Ljx7cBURnZLFwnoh6" target="_blank" rel="noopener noreferrer">
+          <span class="map-icon google-icon" aria-hidden="true">G</span>
+          <span class="map-copy"><strong>Google Maps</strong><small>Open destination in Google Maps</small></span>
+          <span class="map-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>LOCATION REFERENCE</span>
+      <span>ONE IMAGE <i>•</i> TWO MAP LINKS</span>
+    </footer>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded photograph">
+    <button class="lightbox-close" id="closeImage" type="button" aria-label="Close expanded image">×</button>
+    <img src="assets/location-photo.png" alt="Expanded location reference photograph">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
